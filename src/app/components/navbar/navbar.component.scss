@@ -1,0 +1,31 @@
+.navbar{
+    box-shadow: 0px 1px 15px -8px black;
+}
+.title-firstLetter{
+    padding-left: 10px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+}
+.title{
+    color:var(--primary-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+.nav-input{
+    border-radius: 30px;
+    height: 32px;
+    border: 1px solid #78C6BD;
+    position: relative;
+}
+.form-control-feedback{
+    position: absolute;
+    top: 21px;
+    right: 26px;
+    color: #78C6BD;
+}
+.profilepic{
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    overflow: hidden;
+}
