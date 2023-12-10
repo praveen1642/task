@@ -9,6 +9,15 @@
 }
 .card-contant{
     box-shadow:0px 0px 6px -1px rgba(0, 0, 0, 0.384);
+    animation: cardAnimation 1s ease-in ;
+}
+@keyframes cardAnimation{
+    0%{
+        opacity:0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 .card-contant:hover{
     box-shadow:0px 0px 6px -1px var(--secondary-color);
@@ -24,4 +33,16 @@
 .btn-dashboad{
     border-radius: 22px;
     font-size: 12px;
+}
+.delete-icon{
+    color: #D11A2A;
+}
+.edit-icon{
+    color:#008baa
+}
+.post-icon{
+    color:#00aa9c
+}
+.dashboard-icon{
+    color:#aaa700
 }
