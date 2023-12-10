@@ -109,7 +109,7 @@ export class HomeComponent implements OnInit {
   handleOpenFeedBack() {
     this.feedBackModal = 'modal-open';
   }
-  onSecondGroupChange(valuess : any) {
-    this.val = valuess;
+  onSecondGroupChange(values : any) {
+    this.val = values;  
   }
 }
