@@ -183,12 +183,15 @@
                       ></a>
                     </div>
                   </div>
-                  <div id="editor"></div>
+                  <div id="editor">
+                    <span>write your message here...</span>
+                  </div>
                   <textarea
                     name="ticketDesc"
                     id="editorCopy"
                     required="required"
                     style="display: none"
+                    placeholder="write your message here"
                   ></textarea>
                 </div>
               </div>
@@ -280,94 +283,98 @@
         </div>
         <div class="container-fluid">
           <div class="row mt-3">
-            <div class="col-sm-2 mt-2">
-              <p class="p-subcontent">INVITE OTHERS</p>
-              <div class="row mt-2">
-                <div class="col">
-                  <span class="mail-span"
-                    >johnn@gmail.com <i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                </div>
-                <div class="col">
-                  <span class="mail-span"
-                    >kumar@gmail.com <i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <span class="mail-span"
-                    >peter@gmail.com <i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                </div>
-                <div class="col">
-                  <span class="mail-span"
-                    >suresh@yahoo.com <i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <span class="mail-span"
-                    >Queen@gmail.com <i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                </div>
-                <div class="col">
-                  <span class="mail-span"
-                    >babu@yahoo.com <i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                </div>
-              </div>
+            <p class="p-subcontent">INVITE OTHERS</p>
+            <div>
+              <span class="mail-span"
+                >johnn@gmail.com <i class="fa-regular fa-circle-xmark"></i
+              ></span>
+              <span class="mail-span"
+                >kumar@gmail.com <i class="fa-regular fa-circle-xmark"></i
+              ></span>
+              <span class="mail-span"
+                >peter@gmail.com <i class="fa-regular fa-circle-xmark"></i
+              ></span>
+              <span class="mail-span"
+                >suresh@yahoo.com <i class="fa-regular fa-circle-xmark"></i
+              ></span>
+              <span class="mail-span"
+                >Queen@gmail.com <i class="fa-regular fa-circle-xmark"></i
+              ></span>
+              <span class="mail-span"
+                >babu@yahoo.com <i class="fa-regular fa-circle-xmark"></i
+              ></span>
             </div>
-            <div class="col-sm-9 mt-2">
-              <p class="p-subcontent">CHOOSE YOUR MOODS SET</p>
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row mt-4">
+            <!-- <div class="col- mt-2"> -->
+            <p class="p-subcontent">CHOOSE YOUR MOODS SET</p>
+            <div class="row">
+              <div class="col-sm-1">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                    (click)="onSecondGroupChange(val1)"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault2">
                     Default
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                    Clouds
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Moods
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Custom
-                    </label>
-                  </div>
+                  </label>
                 </div>
-                <div class="col-sm-9">
-
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                    (click)="onSecondGroupChange(val2)"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Clouds
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                    (click)="onSecondGroupChange(val3)"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Moods
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                    (click)="onSecondGroupChange(val4)"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Custom
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-11">
+                <div *ngIf="val == 1">
+                  <app-feedback></app-feedback>
+                </div>
+                <div *ngIf="val == 2">
+                  <app-feedback2></app-feedback2>
+                </div>
+                <div *ngIf="val == 3">
+                  <app-feedback3></app-feedback3>
                 </div>
               </div>
             </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>

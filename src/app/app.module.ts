@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { BoardComponent } from './board/board.component';
 import { JoyMeterDetailsComponent } from './components/joy-meter-details/joy-meter-details.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { Feedback2Component } from './components/feedback2/feedback2.component';
+import { Feedback3Component } from './components/feedback3/feedback3.component';
+import { Feedback4Component } from './components/feedback4/feedback4.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     HomeComponent,
     BoardComponent,
     JoyMeterDetailsComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    Feedback2Component,
+    Feedback3Component,
+    Feedback4Component
   ],
   imports: [
     BrowserModule,
