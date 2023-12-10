@@ -104,9 +104,31 @@
                   </select>
                 </div>
               </div>
-              <div class="row">
-                <div class="col">s</div>
-                <div class="col">s</div>
+              <div class="row mt-4">
+                <p class="p-subcontent">EVENT HAPPENED BETWEEN</p>
+                <div class="col-sm-5">
+                  <input type="date" class="datepicker-control" />
+                </div>
+                <div class="col-sm-1" style="text-align: center">
+                  <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="col-sm-5">
+                  <input type="date" class="datepicker-control" />
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row mt-4">
+                <p class="p-subcontent">FEEDBACK DURATION</p>
+                <div class="col-sm-5">
+                  <input type="date" class="datepicker-control" />
+                </div>
+                <div class="col-sm-1" style="text-align: center">
+                  <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="col-sm-5">
+                  <input type="date" class="datepicker-control" />
+                </div>
+                <div class="col-sm-1"></div>
               </div>
             </div>
             <div class="col-sm-3">
@@ -172,17 +194,192 @@
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="feedback-btn"
-              data-dismiss="modal"
-              (click)="closeModal()"
-            >
-              POST FEEDBACK
-            </button>
+        </div>
+        <div class="container-fluid">
+          <div class="row mt-4">
+            <div class="col-sm-9">
+              <p class="p-subcontent">OPTIONS</p>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Checked checkbox
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Default checkbox
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Default checkbox
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Default checkbox
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Checked checkbox
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <p class="p-subcontent">PASSCODE</p>
+              <div class="row" style="text-align: center">
+                <div class="col"><span class="passcode-span">T</span></div>
+                <div class="col"><span class="passcode-span">E</span></div>
+                <div class="col"><span class="passcode-span">S</span></div>
+                <div class="col"><span class="passcode-span">T</span></div>
+              </div>
+              <div class="row mt-3" style="text-align: center">
+                <div class="col"><i class="fa-solid fa-copy"></i>Copy</div>
+                <div class="col"><i class="fa fa-bolt fa-fw"></i>Generate</div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="container-fluid">
+          <div class="row mt-3">
+            <div class="col-sm-2 mt-2">
+              <p class="p-subcontent">INVITE OTHERS</p>
+              <div class="row mt-2">
+                <div class="col">
+                  <span class="mail-span"
+                    >johnn@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                  ></span>
+                </div>
+                <div class="col">
+                  <span class="mail-span"
+                    >kumar@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <span class="mail-span"
+                    >peter@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                  ></span>
+                </div>
+                <div class="col">
+                  <span class="mail-span"
+                    >suresh@yahoo.com <i class="fa-regular fa-circle-xmark"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <span class="mail-span"
+                    >Queen@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                  ></span>
+                </div>
+                <div class="col">
+                  <span class="mail-span"
+                    >babu@yahoo.com <i class="fa-regular fa-circle-xmark"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-9 mt-2">
+              <p class="p-subcontent">CHOOSE YOUR MOODS SET</p>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                    Default
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    Clouds
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Moods
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Custom
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-9">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="feedback-btn"
+          data-dismiss="modal"
+          (click)="closeModal()"
+        >
+          POST FEEDBACK
+        </button>
       </div>
     </div>
   </div>
