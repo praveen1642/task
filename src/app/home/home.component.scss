@@ -19,9 +19,11 @@
         opacity: 100%;
     }
 }
+.taking-col{
+    cursor: pointer;
+}
 .card-contant:hover{
     box-shadow:0px 0px 6px -1px var(--secondary-color);
-    cursor: pointer;
 }
 .heading-content{
     font-size: 14px;
