@@ -6,34 +6,52 @@
     </button>
   </div>
 </div>
-<div class="card card-contant py-2 mt-2" *ngFor="let data of joyMeterData">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <h6 class="heading active">TAKING FEEDBACK</h6>
-        <h6 class="heading-content">{{ data.taking }}</h6>
-      </div>
-      <div class="col">
-        <h6 class="heading">EVENT TYPE</h6>
-        <div class="list-text">{{ data.eventType }}</div>
-      </div>
-      <div class="col">
-        <h6 class="heading">CREATOR</h6>
-        <div class="list-text">{{ data.creator }}</div>
-      </div>
-      <div class="col">
-        <h6 class="heading">FEEDBACK STATUS</h6>
-        <div class="list-text" [style.color]="data.feedbackStatus.color">
-          {{ data.feedbackStatus.text }}
+<div *ngIf="!isDetailOpen">
+  <div class="card card-contant py-2 mt-2" *ngFor="let data of joyMeterData">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3 taking-col" (click)="handleOpenDetail(data)">
+          <h6 class="heading active">TAKING FEEDBACK</h6>
+          <h6 class="heading-content">{{ data.taking }}</h6>
+        </div>
+        <div class="col">
+          <h6 class="heading">EVENT TYPE</h6>
+          <div class="list-text">{{ data.eventType }}</div>
+        </div>
+        <div class="col">
+          <h6 class="heading">CREATOR</h6>
+          <div class="list-text">{{ data.creator }}</div>
+        </div>
+        <div class="col-2">
+          <h6 class="heading">FEEDBACK STATUS</h6>
+          <div class="list-text" [style.color]="data.feedbackStatus.color">
+            {{ data.feedbackStatus.text }}
+          </div>
+        </div>
+        <div class="col-2">
+          <h6 class="heading">EVENT HAPPENED BETWEEN</h6>
+          <div class="list-text">
+            {{ data.evtHapBet.start }} - {{ data.evtHapBet.end }}
+          </div>
+        </div>
+        <div class="col">
+          <h6 class="heading d-flex justify-content-center">ACTION</h6>
+          <div class="d-flex justify-content-between">
+            <a href="/board">
+              <button class="btn btn-primary board-btn">Board</button></a
+            >
+            <div tabindex="0" data-bs-toggle="tooltip" title="Post">
+              <i class="fa-solid fa-file-circle-plus post-icon"></i>
+            </div>
+            <div tabindex="0" data-bs-toggle="tooltip" title="Edit">
+              <i class="fa-solid fa-pen-to-square edit-icon"></i>
+            </div>
+            <div tabindex="0" data-bs-toggle="tooltip" title="Delete">
+              <i class="fa-solid fa-trash delete-icon"></i>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-4">
-        <h6 class="heading">EVENT HAPPENED BETWEEN</h6>
-        <div class="list-text">
-          {{ data.evtHapBet.start }} - {{ data.evtHapBet.end }}
-        </div>
-      </div>
-      <div class="col"><h6 class="heading">ACTION</h6></div>
     </div>
   </div>
 </div>
@@ -162,4 +180,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<div *ngIf="isDetailOpen" class="mt-4">
+  <app-joy-meter-details
+    [detailData]="detailData"
+    (returnHome)="handleReturnHome($event)"
+  ></app-joy-meter-details>
 </div>

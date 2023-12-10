@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BoardComponent } from './board/board.component';
+import { JoyMeterDetailsComponent } from './components/joy-meter-details/joy-meter-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    BoardComponent
+    BoardComponent,
+    JoyMeterDetailsComponent
   ],
   imports: [
     BrowserModule,

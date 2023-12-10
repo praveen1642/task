@@ -72,21 +72,39 @@
 }
 
 .modal-footer {
-  .feedback-btn {
-    border: 1px solid var(--primary-color) !important;
-    border-radius: 25px !important;
-    background-color: var(--primary-color);
-    font-weight: 400;
-    font-size: 15px;
-    padding: 5px;
-    color: white;
+    .feedback-btn {
+      border: 1px solid var(--primary-color) !important;
+      border-radius: 25px !important;
+      background-color: var(--primary-color);
+      font-weight: 400;
+      font-size: 15px;
+      padding: 5px;
+      color: white;
+    }
   }
+  
+  .form-select {
+    font-size: 15px;
+    border: none !important;
+    border-bottom: 1px solid var(--primary-color) !important;
+  }
+.card-contant{
+    box-shadow:0px 0px 6px -1px rgba(0, 0, 0, 0.384);
+    animation: cardAnimation 1s ease-in ;
 }
-
-.form-select {
-  font-size: 15px;
-  border: none !important;
-  border-bottom: 1px solid var(--primary-color) !important;
+@keyframes cardAnimation{
+    0%{
+        opacity:0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.taking-col{
+    cursor: pointer;
+}
+.card-contant:hover{
+    box-shadow:0px 0px 6px -1px var(--secondary-color);
 }
 .containersss {
   // display: none;
@@ -178,3 +196,26 @@ a:hover {
 /* ==========================================================================
    Buttons
    ========================================================================== */
+
+
+   .btn-dashboad{
+    border-radius: 22px;
+    font-size: 12px;
+}
+.delete-icon{
+    color: #D11A2A;
+}
+.edit-icon{
+    color:#008baa
+}
+.post-icon{
+    color:#00aa9c
+}
+.dashboard-icon{
+    color:#aaa700
+}
+.board-btn{
+    border-radius: 20px;
+    padding: 2px 12px;
+    font-size: 12px;
+}
