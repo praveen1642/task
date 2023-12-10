@@ -215,7 +215,15 @@ a:hover {
     color:#aaa700
 }
 .board-btn{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 20px;
+    padding: 2px 12px;
+    font-size: 12px;
+}
+.post-btn-outline{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     padding: 2px 12px;
     font-size: 12px;
 }

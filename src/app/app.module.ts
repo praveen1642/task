@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BoardComponent } from './board/board.component';
 import { JoyMeterDetailsComponent } from './components/joy-meter-details/joy-meter-details.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JoyMeterDetailsComponent } from './components/joy-meter-details/joy-met
     NavbarComponent,
     HomeComponent,
     BoardComponent,
-    JoyMeterDetailsComponent
+    JoyMeterDetailsComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

@@ -41,7 +41,13 @@
               <button class="btn btn-primary board-btn">Board</button></a
             >
             <div tabindex="0" data-bs-toggle="tooltip" title="Post">
-              <i class="fa-solid fa-file-circle-plus post-icon"></i>
+              <button
+                class="btn post-btn-outline"
+                (click)="handleOpenFeedBack()"
+              >
+                <!-- <i class="fa-solid fa-file-circle-plus post-icon"></i> -->
+                Post
+              </button>
             </div>
             <div tabindex="0" data-bs-toggle="tooltip" title="Edit">
               <i class="fa-solid fa-pen-to-square edit-icon"></i>
@@ -181,7 +187,11 @@
     </div>
   </div>
 </div>
-
+<div [ngClass]="feedBackModal" class="containersss" tabindex="-1" role="dialog">
+  <div class="content" role="document">
+    <app-feedback></app-feedback>
+  </div>
+</div>
 <div *ngIf="isDetailOpen" class="mt-4">
   <app-joy-meter-details
     [detailData]="detailData"
