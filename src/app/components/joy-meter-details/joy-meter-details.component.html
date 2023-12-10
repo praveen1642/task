@@ -1,0 +1,184 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card card-details w-100 py-2">
+        <div class="container" *ngFor="let data of detailData">
+          <div class="row my-3">
+            <div class="col">
+              <i
+                class="fa-solid fa-circle-arrow-left"
+                (click)="handleReturnHome()"
+              ></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h6 class="heading active">Event Name</h6>
+              <p class="heading-content">
+                {{ data.taking }}
+                <span class="p-2 schedule-text text-light">Scheduled</span>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <p>At very top of the MEAN stack is Angular.js the self-styled</p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h6 class="heading active">Event TypeName</h6>
+              <p class="text-content">
+                {{ data.eventType }}
+              </p>
+            </div>
+            <div class="col">
+              <h6 class="heading active">Feedback Status</h6>
+              <p class="text-content" [style.color]="data.feedbackStatus.color">
+                {{ data.feedbackStatus.text }}
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <h6 class="heading active">Created By</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img
+                class="profile-pic"
+                src="../../../assets/profilepic.png"
+                alt=""
+                width="50"
+              />
+              <div class="text-content">Mambo Jambo</div>
+              <div class="text-role">Senior Software Engineer & DevOps</div>
+            </div>
+            <div class="col px-5 pt-3">
+              <div class="d-flex justify-content-between">
+                <div class="text-content">
+                  <i class="fa-solid fa-phone"></i> +42516389
+                </div>
+                <div class="text-content">
+                  <i class="fa-solid fa-envelope"></i> mambo@control.ck
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <div class="text-content">
+                  <i class="fa-brands fa-whatsapp"></i> +400099887766
+                </div>
+                <div class="text-content">
+                  <i class="fa-brands fa-skype"></i> toni_kroos
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <h6 class="heading active">Occurred Between</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <div class="text-content">
+                {{ data.evtHapBet.start }} - {{ data.evtHapBet.end }}
+              </div>
+            </div>
+            <div class="col">
+              <a href="/board">
+                <button class="btn btn-primary m-2 action-btn-details">
+                  Board
+                </button></a
+              >
+              <button
+                class="btn btn-primary-outline m-2 action-btn-details"
+                (click)="handlOpenPostModal()"
+              >
+                Post
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-auto">
+              <div class="text-outlined">Team Alpha</div>
+            </div>
+            <div class="col-auto">
+              <div class="text-outlined">VZ Team</div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <h6 class="heading active">PASSCODE</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <div class="pass-contant d-flex justify-content-between">
+                <div class="passcode">M</div>
+                <div class="passcode">A</div>
+                <div class="passcode">R</div>
+                <div class="passcode">Y</div>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <button class="btn btn-seconday-outline m-2 py-1">
+                <i class="fa-solid fa-pen-to-square edit-icon"></i> Edit
+              </button>
+              <button class="btn btn-primary-outline m-2 py-1">
+                <i class="fa-solid fa-trash delete-icon"></i> Delete
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a class="copyUrl-text" href="#"
+                ><span><i class="fa-solid fa-copy"></i></span> Copy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="col">
+          <div class="heading">Event Link</div>
+          <div class="d-flex justify-content-center">
+            <img
+              src="../../../assets/qrcode.png"
+              alt=""
+              width="60%"
+              height="60%"
+            />
+          </div>
+          <div class="d-flex justify-content-center">
+            <a class="copyUrl-text" href="#"
+              ><span><i class="fa-solid fa-copy"></i></span> Copy URL</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <h6 class="heading active">Other Members</h6>
+        </div>
+      </div>
+      <div class="card card-user mt-2 px-2 py-0">
+        <div class="row">
+          <div class="col-6 mt-4" *ngFor="let data of userData">
+            <div class="userList-card p-0">
+              <img
+                class="profile-pic"
+                src="../../../assets/profilepic.png"
+                alt=""
+                width="30px"
+                height="30px"
+              />
+
+              <span class="text-user">{{ data.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

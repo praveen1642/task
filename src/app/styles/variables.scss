@@ -1,3 +1,17 @@
 :root{
-    --primary-color: #F08A5D;
+    --primary-color: #d50c48;
+    --secondary-color:#0CD599;
+
+    --heading-color-light:#858080;
+
+    // font-family
+    --primary-fontFamily: sans-serif;
+
+    // font-size
+    --primary-fontSize: 20px;
+
+
+    // button
+    --text-color: white;
+    --bg-color: var(--primary-color);
 }

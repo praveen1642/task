@@ -1,0 +1,107 @@
+
+.heading{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--heading-color-light);
+}
+.heading-content{
+    font-size: 14px;
+    font-weight: 700;
+}
+.card-details{
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-width: 3px;
+    border-top-width: 2px;
+    border-bottom-color: var(--primary-color);
+    border-top-color: var(--secondary-color);
+}
+.schedule-text{
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 12px;
+    color: whitesmoke;
+}
+.copyUrl-text{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+.text-content{
+    font-size: 14px;
+    
+}
+.text-role{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--heading-color-light);
+
+}
+.profile-pic{
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.action-btn-details{
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.text-outlined{
+    color: black;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 3px 6px;
+}
+.pass-contant{
+    width: 132px;
+}
+.passcode{
+    border: 2px solid var(--primary-color);
+    color: var(--heading-color-light);
+    padding: 2px 5px;
+}
+
+.btn-seconday-outline{
+    color: var(--secondary-color) !important;
+    border: 1px solid var(--secondary-color) !important;
+}
+.text-user{
+    font-size: 12px;
+}
+.card-user{
+    height: 38%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.user-col{
+    width: 20px;
+}
+.user-list{
+    height: 40px;
+    overflow: auto;
+}
+
+.userList-card{
+    border-left: 1px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 3px 4px;
+}
+.fa-phone{
+    color: rgb(0, 87, 158);
+}
+.fa-envelope{
+    color: var(--primary-color);
+}
+.fa-whatsapp{
+    color: green;
+}
+.fa-skype{
+    color:cornflowerblue;
+}
+.fa-circle-arrow-left{
+    color: var(--primary-color);
+    font-size: 30px;
+    cursor: pointer;
+}
