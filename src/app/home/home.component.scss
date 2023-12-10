@@ -32,6 +32,13 @@
   border: none !important;
   border-bottom: 1px solid var(--primary-color) !important;
 }
+
+.datepicker-control {
+    border: none !important;
+    border-bottom: 1px solid var(--primary-color) !important;
+    width: 100%;
+    // color: gray;
+  }
 .title-firstLetter {
   padding-left: 10px;
   font-size: 18px;
@@ -57,6 +64,7 @@
     font-family: monospace;
     text-align: center;
     letter-spacing: 15px;
+    color: var(--primary-color);
   }
 }
 
@@ -111,7 +119,7 @@
   box-shadow: 0px 1px 15px -8px black;
   position: fixed;
   z-index: 1;
-  padding-top: 10%;
+  padding-top: 2%;
   left: 0;
   top: 0;
   width: 100%;
@@ -126,6 +134,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 25px;
 }
 
 i {
@@ -226,4 +235,24 @@ a:hover {
     border: 1px solid var(--primary-color);
     padding: 2px 12px;
     font-size: 12px;
+}
+.form-check-input{
+    background-color: none;
+    border-color: var(--primary-color);
+}
+.form-check-input:checked{
+    background-color: var(--primary-color);
+}
+
+.passcode-span{
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid var(--primary-color);  
+}
+
+.mail-span{
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 2px 8px 2px 8px;
+    font-size: 10px;
 }
