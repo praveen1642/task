@@ -189,7 +189,27 @@
 </div>
 <div [ngClass]="feedBackModal" class="containersss" tabindex="-1" role="dialog">
   <div class="content" role="document">
+    <div class="row">
+      <div class="col d-flex justify-content-end">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6 class="heading">Feedback:</h6>
+      </div>
+    </div>
+
     <app-feedback></app-feedback>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col">asdfghjk</div>
+        </div>
+      </div>
+      <div class="col-4">asdfghjk</div>
+    </div>
   </div>
 </div>
 <div *ngIf="isDetailOpen" class="mt-4">
