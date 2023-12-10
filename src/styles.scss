@@ -2,3 +2,15 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import './app/styles/variables.scss';
+
+
+.btn-primary{
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+    border: none;
+}
+.btn-primary:hover{
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: none;
+}
