@@ -26,7 +26,17 @@
     font-size: 12px;
     letter-spacing: 1px;
 }
-
+.datepicker-control {
+  border: none !important;
+  border-bottom: 1px solid var(--primary-color) !important;
+  width: 100%;
+  // color: gray;
+}
+.form-select {
+  font-size: 15px;
+  border: none !important;
+  border-bottom: 1px solid var(--primary-color) !important;
+}
 .sub-title {
   font-size: var(--primary-fontSize);
   font-weight: 300;
@@ -171,7 +181,7 @@
   font-size: 8px;
 }
 .number-circle-pink{
-  background-color: pink;
+  background-color: #c55c5c;
   padding: 5px;
   border-radius: 50%;
   font-size: 8px;

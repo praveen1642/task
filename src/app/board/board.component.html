@@ -59,30 +59,28 @@
               </div>
               <div class="row align-items-center mb-3">
                 <span class="span-subhed">Filter statistics by date:</span>
-                <div class="col-5 mt-2">
-                  <input
-                    style="border-color: orange; border-radius: 5px"
-                    type="date"
-                  />
-                </div>
-                <div class="col-2">
-                  <i class="fa-solid fa-arrows-left-right"></i>
-                </div>
-                <div class="col-5 mt-2">
-                  <input
-                    style="border-color: orange; border-radius: 5px"
-                    type="date"
-                  />
+                <div class="row mt-2">
+                  <div class="col-sm-5">
+                    <input type="date" class="datepicker-control" />
+                  </div>
+                  <div class="col-sm-1" style="text-align: center">
+                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="date" class="datepicker-control" />
+                  </div>
+                  <div class="col-sm-1"></div>
                 </div>
               </div>
               <div class="row mb-3">
                 <span class="span-subhed">Filter feedback by score:</span>
-                <div class="col-5 mt-2">
-                  <input
-                    placeholder="Show all overtime"
-                    type="text"
-                    style="border-color: orange; border-radius: 5px"
-                  />
+                <div class="col-lg-5"> 
+                  <select class="form-select form-select-lg">
+                    <option selected>Seminar</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -100,7 +98,7 @@
     <div class="card-section">
       <div class="row">
         <div class="col-9">
-          <div class="top-container">
+          <!-- <div class="top-container"> -->
             <span class="list-menu"
               >TRIED <span class="number-circle-pink">90</span></span
             >
@@ -131,11 +129,11 @@
             <span class="list-menu"
               >CUSTOM <span class="number-circle">90</span></span
             >
-          </div>
+          <!-- </div> -->
         </div>
       </div>
-      <div class="row">
-        <div *ngFor="let datas of data" class="col-lg-3">
+      <div class="row justify-content-center align-items-center">
+        <div *ngFor="let datas of data" class="col-lg-3 col-sm-6 col-md-6">
           <main class="l-card" >
             <section class="l-card__text">
               <h5 [style.color]="datas.color" style="font-size: 20px; color: rgb(0, 162, 255)">
