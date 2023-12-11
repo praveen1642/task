@@ -11,7 +11,12 @@
         </div>
       </div>
       <div class="col-sm-4 feedback-btndiv">
-        <button class="feedback-btn">POST FEEDBACK</button>
+        <button class="btn btn-dashboad">
+          <i class="fa-solid fa-gauge-simple-high" ></i>   Personal Dashboard
+        </button>
+        <button class="btn btn-dashboad" [routerLink]="['/home']">
+          <i class="fa-solid fa-gauge-simple-high" ></i>   Exit Board
+        </button>
       </div>
     </div>
     <div class="row mt-4 content-row">
@@ -50,11 +55,115 @@
               </div>
               <div class="row">
                 <span class="span-subhed">event happened between:</span>
+                <p>20:30 Mon 15 Jul,2021 &#8594; 12:30 Mon 22,2021</p>
+              </div>
+              <div class="row align-items-center mb-3">
+                <span class="span-subhed">Filter statistics by date:</span>
+                <div class="col-5 mt-2">
+                  <input
+                    style="border-color: orange; border-radius: 5px"
+                    type="date"
+                  />
+                </div>
+                <div class="col-2">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </div>
+                <div class="col-5 mt-2">
+                  <input
+                    style="border-color: orange; border-radius: 5px"
+                    type="date"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <span class="span-subhed">Filter feedback by score:</span>
+                <div class="col-5 mt-2">
+                  <input
+                    placeholder="Show all overtime"
+                    type="text"
+                    style="border-color: orange; border-radius: 5px"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-sm-6 col-lg-6 col-mg-6">vxgdfvxvx</div>
+          <div class="col-xl-6 col-sm-6 col-lg-6 col-mg-6">
+            <ag-charts-angular
+              style="height: 100%"
+              [options]="options"
+            ></ag-charts-angular>
+          </div>
           <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="card-section">
+      <div class="row">
+        <div class="col-9">
+          <div class="top-container">
+            <span class="list-menu"
+              >TRIED <span class="number-circle-pink">90</span></span
+            >
+            <span class="list-menu"
+              >DISAPOINTED <span class="number-circle-pink">60</span></span
+            >
+            <span class="list-menu"
+              >DOWN <span class="number-circle-pink">60</span></span
+            >
+            <span class="list-menu"
+              >POSITIVE <span class="number-circle">50</span></span
+            >
+            <span class="list-menu"
+              >CHARMED <span class="number-circle">50</span></span
+            >
+            <span class="list-menu"
+              >BELONGED <span class="number-circle">50</span></span
+            >
+            <span class="list-menu"
+              >ACCOMPLISHED <span class="number-circle-sky">90</span></span
+            >
+            <span class="list-menu"
+              >VERY HAPPY <span class="number-circle-sky">90</span></span
+            >
+            <span class="list-menu"
+              >THRILLED <span class="number-circle-sky">90</span></span
+            >
+            <span class="list-menu"
+              >CUSTOM <span class="number-circle">90</span></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let datas of data" class="col-3">
+          <main class="l-card">
+            <section class="l-card__text">
+              <h5 style="font-size: 20px; color: rgb(0, 162, 255)">
+                {{ datas.head }} <i class="{{ datas.icon }}"></i>
+              </h5>
+
+              <h6 style="font-size: 17px">{{ datas.content }}</h6>
+            </section>
+            <section class="l-card__user">
+              <div class="l-card__userImage">
+                <img
+                  src="https://avatars.githubusercontent.com/u/20525486?v=4"
+                  alt="Naruto"  
+                />
+              </div>
+              <div class="l-card__userInfo">
+                <div class="row align-items-center">
+                  <div class="col-10">
+                    <span style="font-size: 12px">{{ datas.name }}</span>
+                    <span>{{ datas.team }}</span>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
       </div>
     </div>

@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-auto d-flex feedback-text justify-content-center align-items-center py-2 text-light"
+        *ngFor="let data of feedBacks"
+        [style.background-color]="data.bgColor"
+      >
+        <button class="feedback-btn">
+          <input [style.background-color]="data.bgColor" type="radio" />
+          {{ data.name | uppercase }}
+        </button>
+      </div>
+    </div>
+  </div>

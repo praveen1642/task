@@ -20,10 +20,21 @@ declare const $: any;
 })
 export class HomeComponent implements OnInit {
   modal = 'modal';
+  modal1 = 'modal';
   feedBackModal = 'modal';
+  model: any;
+  val1 = 1;
+  val2 = 2;
+  val3 = 3;
+  val4 = 4;
+  val = 1;
+  // public value :any;
   ngOnInit(): void {
+    // this.value = new Date('1/1/2020');
+    // console.log(this.value);
     // this.detailData.push({taking:"A very long title that spans more than one line of text",eventType:'Webiner' ,creator:'event Maker' , feedbackStatus:{text:'Only 10 hours left!', color:'#ffcc00'},evtHapBet:{start:'20:30 Mon 21 Sep,2021',end:'12:30 Tue 22 Sep,2021'},action:{board:true,post:true,edit:true,delete:true}});
   }
+
   detailData: any = [];
   joyMeterData = [
     {
@@ -89,7 +100,16 @@ export class HomeComponent implements OnInit {
   closeModal() {
     this.modal = 'modal';
   }
+  openModals(inp: string) {
+    this.feedBackModal = 'modal-open';
+  }
+  closeModals(){
+    this.feedBackModal = 'modal';
+  }
   handleOpenFeedBack() {
     this.feedBackModal = 'modal-open';
+  }
+  onSecondGroupChange(values : any) {
+    this.val = values;  
   }
 }
