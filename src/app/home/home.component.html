@@ -399,15 +399,160 @@
       </div>
     </div>
   </div>
-  <div [ngClass]="feedBackModal" class="containersss" tabindex="-1" role="dialog">
-    <div class="content" role="document">
-      <app-feedback></app-feedback>
+</div>
+<div [ngClass]="feedBackModal" class="containersss" tabindex="-1" role="dialog">
+  <div class="content" role="document">
+    <div class="row">
+      <div class="col d-flex justify-content-end">
+        <i class="fa-solid fa-xmark" (click)="handleCloseFeedBack()"></i>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col">
+        <div class="navbar-brand"
+      ><span class="text-light pl-4 title-firstLetter">J</span
+      ><span class="">oyMeter</span></div
+    >
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <h5 class="postfeedback-heading">Post Feedback:</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6 class="heading">Feedback:</h6>
+      </div>
+    </div>
+
+    <app-feedback></app-feedback>
+
+    <div class="row mt-3">
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+            <div class="btn-primary"><input type="radio" [checked]="custradio" (change)="customBtn($event)" /> Custom</div>
+          </div>
+          <div class="col-lg-6">
+            <div class="textarea-cont">
+              <div id="editparent">
+                <div id="editControls">
+                  <div class="btn-group">
+                    <a
+                      class="btn btn-xs btn-default"
+                      data-role="undo"
+                      href="#"
+                      title="Undo"
+                      ><i class="fa fa-undo"></i
+                    ></a>
+                    <a
+                      class="btn btn-xs btn-default"
+                      data-role="redo"
+                      href="#"
+                      title="Redo"
+                      ><i class="fa fa-repeat"></i
+                    ></a>
+                  </div>
+                  <div class="btn-group">
+                    <a
+                      class="btn btn-xs btn-default"
+                      data-role="bold"
+                      href="#"
+                      title="Bold"
+                      ><i class="fa fa-bold"></i
+                    ></a>
+                    <a
+                      class="btn btn-xs btn-default"
+                      data-role="italic"
+                      href="#"
+                      title="Italic"
+                      ><i class="fa fa-italic"></i
+                    ></a>
+                    <a
+                      class="btn btn-xs btn-default"
+                      data-role="underline"
+                      href="#"
+                      title="Underline"
+                      ><i class="fa fa-underline"></i
+                    ></a>
+                    <a
+                      class="btn btn-xs btn-default"
+                      data-role="strikeThrough"
+                      href="#"
+                      title="Strikethrough"
+                      ><i class="fa fa-strikethrough"></i
+                    ></a>
+                  </div>
+                </div>
+                <!-- <div id="editor"></div> -->
+                <textarea
+                class="textArea-feed heading"
+                  name="ticketDesc"
+                  id="editorCopy"
+                  required="required"
+                 
+                >{{feedBackCmt}}</textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                <h6 class="heading">
+                  Custom Feedback:
+                </h6>
+                <input
+                type="text"
+                class="form-control heading"
+                placeholder=""
+                value="mind blowing tastic!"
+                aria-label="Recipient's username"
+              />
+            </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <h6 class="heading">
+                  Colors:
+                  </h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col heading">
+                 <input type="radio" /> Red
+                </div>
+                <div class="col heading">
+                  <input type="radio" [checked]="!custradio" /> Yellow
+                </div>
+                <div class="col heading">
+                  <input type="radio" [checked]="custradio" /> Green
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <h6 class="heading" >Post As:</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 heading d-flex justify-content-start align-items-center">
+        <input type="radio" /> MySelf
+      </div>
+      <div class="col-1 heading d-flex justify-content-start align-items-center">
+        <input type="radio" /> Anonymous
+      </div>
+      <div class="col d-flex justify-content-end">
+        <button class="btn btn-primary postFeedback-btn">Post FeedBack</button>
+      </div>
     </div>
   </div>
-  <div *ngIf="isDetailOpen" class="mt-4">
-    <app-joy-meter-details
-      [detailData]="detailData"
-      (returnHome)="handleReturnHome($event)"
-    ></app-joy-meter-details>
-  </div>
+</div>
+<div *ngIf="isDetailOpen" class="mt-4">
+  <app-joy-meter-details
+    [detailData]="detailData"
+    (returnHome)="handleReturnHome($event)"
+    (openPostModal)="handleopenPostModal($event)"
+  ></app-joy-meter-details>
 </div>
