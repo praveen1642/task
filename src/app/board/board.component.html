@@ -52,9 +52,28 @@
                 <span class="span-subhed">event happened between:</span>
                 <p>20:30 Mon 15 Jul,2021 &#8594; 12:30 Mon 22,2021</p>
               </div>
+              <div class="row  align-items-center mb-3">
+                <span class="span-subhed">Filter statistics by date:</span>
+                <div class="col-5 mt-2">
+                   <input style="border-color: orange;border-radius: 5px;" type="date">
+                </div>
+                <div class="col-2">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </div>
+                <div class="col-5 mt-2">
+                   <input style="border-color: orange;border-radius: 5px;" type="date">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <span class="span-subhed">Filter feedback by score:</span>
+<div class="col-5 mt-2">
+  <input placeholder="Show all overtime" type="text" style="border-color: orange;border-radius: 5px;">
+
+</div>
+              </div>
             </div>
           </div>
-          <div class="col-xl-6 col-sm-6 col-lg-6 col-mg-6">vxvxvx</div>
+          <div class="col-xl-6 col-sm-6 col-lg-6 col-mg-6">chart set</div>
           <!-- </div> -->
         </div>
       </div>
@@ -80,7 +99,7 @@
         <div *ngFor="let datas of data" class="col-3" >
             <main class="l-card">
               <section class="l-card__text">
-                <h5 style="font-size: 20px;color: orange;" > {{datas.head}}</h5>
+                <h5 style="font-size: 20px;color: rgb(0, 162, 255);" > {{datas.head}} <i class={{datas.icon}}></i></h5>
                 
                 <h6 style="font-size: 17px;" > {{datas.content}}</h6>
               </section>
