@@ -50,6 +50,7 @@
               </div>
               <div class="row">
                 <span class="span-subhed">event happened between:</span>
+                <p>20:30 Mon 15 Jul,2021 &#8594; 12:30 Mon 22,2021</p>
               </div>
             </div>
           </div>
@@ -58,5 +59,55 @@
         </div>
       </div>
     </div>
+    <div class="card-section">
+      <div class="row">
+        <div class="col-9">
+            <div class="top-container">
+            <span class="list-menu" >TRIED <span class="number-circle-pink" >90</span></span>
+            <span class="list-menu">DISAPOINTED <span class="number-circle-pink" >60</span></span>
+            <span class="list-menu">DOWN <span class="number-circle-pink" >60</span></span>
+            <span class="list-menu">POSITIVE <span class="number-circle" >50</span></span>
+            <span class="list-menu">CHARMED <span class="number-circle" >50</span></span>
+            <span class="list-menu">BELONGED <span class="number-circle" >50</span></span>
+            <span class="list-menu">ACCOMPLISHED <span class="number-circle-sky" >90</span></span>
+            <span class="list-menu">VERY HAPPY <span class="number-circle-sky" >90</span></span>
+            <span class="list-menu">THRILLED <span class="number-circle-sky" >90</span></span>
+            <span class="list-menu">CUSTOM <span class="number-circle" >90</span></span>
+          </div>
+         </div>
+      </div>
+      <div class="row" >
+        <div *ngFor="let datas of data" class="col-3" >
+            <main class="l-card">
+              <section class="l-card__text">
+                <h5 style="font-size: 20px;color: orange;" > {{datas.head}}</h5>
+                
+                <h6 style="font-size: 17px;" > {{datas.content}}</h6>
+              </section>
+              <section class="l-card__user">
+                <div class="l-card__userImage">
+                  <img src="https://avatars.githubusercontent.com/u/20525486?v=4" alt="Naruto">
+                </div>
+                <div class="l-card__userInfo">
+                  <div class="row align-items-center">
+                    <div class="col-10">
+                      <span style="font-size: 12px;" >{{datas.name}}</span>
+                      <span>{{datas.team}}</span>
+                    </div>
+                    <div class="col-2">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </main>
+         
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
+
+
+
