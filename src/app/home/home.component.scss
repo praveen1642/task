@@ -144,6 +144,7 @@ i {
 
 .textarea-cont {
   border: 1px solid var(--primary-color);
+  height: 132px !important;
 }
 
 .title h1,
@@ -264,4 +265,23 @@ a:hover {
 }
 .fa-xmark{
   font-size: 1.5rem;
+}
+.fa-xmark{
+  cursor: pointer;
+}
+.postFeedback-btn{
+  font-size: 12px;
+}
+.postfeedback-heading{
+  font-weight: 600;
+  color: var(--heading-color-light);
+}
+.textArea-feed{
+  width: 100%;
+  height: 12vh;
+  border: none !important;
+  outline: none;
+}
+.textArea-feed:active{
+  border: none;
 }

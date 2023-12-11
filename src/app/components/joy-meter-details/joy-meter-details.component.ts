@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class JoyMeterDetailsComponent {
   @Input() detailData: any;
   @Output() returnHome: EventEmitter<any> = new EventEmitter<Boolean>();
+  @Output() openPostModal: EventEmitter<any> = new EventEmitter<Boolean>();
   userData = [
     { name: 'Karla Sevensson' },
     { name: 'Toni Kroos' },
@@ -20,7 +21,9 @@ export class JoyMeterDetailsComponent {
     { name: 'Jack Schnider' },
     { name: 'Peter Bjorn' },
   ];
-  handlOpenPostModal() {}
+  handlOpenPostModal() {
+    this.openPostModal.emit(true)
+  }
   handleReturnHome() {
     this.returnHome.emit(false);
   }

@@ -135,10 +135,10 @@
         </div>
       </div>
       <div class="row">
-        <div *ngFor="let datas of data" class="col-3">
-          <main class="l-card">
+        <div *ngFor="let datas of data" class="col-lg-3">
+          <main class="l-card" >
             <section class="l-card__text">
-              <h5 style="font-size: 20px; color: rgb(0, 162, 255)">
+              <h5 [style.color]="datas.color" style="font-size: 20px; color: rgb(0, 162, 255)">
                 {{ datas.head }} <i class="{{ datas.icon }}"></i>
               </h5>
 
