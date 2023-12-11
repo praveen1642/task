@@ -133,14 +133,14 @@
         </div>
       </div>
       <div class="row justify-content-center align-items-center">
-        <div *ngFor="let datas of data" class="col-lg-3 col-sm-6 col-md-6">
+        <div *ngFor="let datas of data" class="col-lg-3 col-sm-6 col-md-6 d-flex justify-content-center">
           <main class="l-card" >
             <section class="l-card__text">
-              <h5 [style.color]="datas.color" style="font-size: 20px; color: rgb(0, 162, 255)">
+              <h5 class="heading" [style.color]="datas.color">
                 {{ datas.head }} <i class="{{ datas.icon }}"></i>
               </h5>
 
-              <h6 style="font-size: 17px">{{ datas.content }}</h6>
+              <p class="text-contant">{{ datas.content }}</p>
             </section>
             <section class="l-card__user">
               <div class="l-card__userImage">
@@ -151,7 +151,7 @@
               </div>
               <div class="l-card__userInfo">
                 <div class="row align-items-center">
-                  <div class="col-10">
+                  <div class="col--10">
                     <span style="font-size: 12px">{{ datas.name }}</span>
                     <span>{{ datas.team }}</span>
                   </div>

@@ -52,7 +52,7 @@ export class BoardComponent {
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo eaque, excepturi autem qui molestiae magni? Hic iste eum esse nihil itaque quae amet, quisquam omnis, molestiae cumque, ratione consectetur!',
       name: 'Patty',
-      head: 'Possitive',
+      head: 'Positive',
       color: '#008000',
       icon: 'fa-regular fa-thumbs-up',
       team: 'Team A',
