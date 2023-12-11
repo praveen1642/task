@@ -11,6 +11,10 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { Feedback2Component } from './components/feedback2/feedback2.component';
 import { Feedback3Component } from './components/feedback3/feedback3.component';
 import { Feedback4Component } from './components/feedback4/feedback4.component';
+import { PersonalDashboardComponent } from './personal-dashboard/personal-dashboard.component';
+import { ChartComponent } from './chart/chart.component';
+import { ChartsComponent } from './charts/charts.component';
+import { AgChartsAngularModule } from 'ag-charts-angular';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { Feedback4Component } from './components/feedback4/feedback4.component';
     FeedbackComponent,
     Feedback2Component,
     Feedback3Component,
-    Feedback4Component
+    Feedback4Component,
+    PersonalDashboardComponent,
+    ChartComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgChartsAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,404 +1,413 @@
-<div class="d-flex justify-content-end">
-  <div class="">
-    <button class="btn btn-dashboad" (click)="openModal('custom-modal-1')">
-      Create a <span class="text-light pl-4 title-firstLetter">J</span
-      ><span class="titles">oyMeter</span> Session
-    </button>
-  </div>
-</div>
-<div *ngIf="!isDetailOpen">
-  <div class="card card-contant py-2 mt-2" *ngFor="let data of joyMeterData">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-3 taking-col" (click)="handleOpenDetail(data)">
-          <h6 class="heading active">TAKING FEEDBACK</h6>
-          <h6 class="heading-content">{{ data.taking }}</h6>
-        </div>
-        <div class="col">
-          <h6 class="heading">EVENT TYPE</h6>
-          <div class="list-text">{{ data.eventType }}</div>
-        </div>
-        <div class="col">
-          <h6 class="heading">CREATOR</h6>
-          <div class="list-text">{{ data.creator }}</div>
-        </div>
-        <div class="col-2">
-          <h6 class="heading">FEEDBACK STATUS</h6>
-          <div class="list-text" [style.color]="data.feedbackStatus.color">
-            {{ data.feedbackStatus.text }}
-          </div>
-        </div>
-        <div class="col-2">
-          <h6 class="heading">EVENT HAPPENED BETWEEN</h6>
-          <div class="list-text">
-            {{ data.evtHapBet.start }} - {{ data.evtHapBet.end }}
-          </div>
-        </div>
-        <div class="col">
-          <h6 class="heading d-flex justify-content-center">ACTION</h6>
-          <div class="d-flex justify-content-between">
-            <a href="/board">
-              <button class="btn btn-primary board-btn">Board</button></a
-            >
-            <div tabindex="0" data-bs-toggle="tooltip" title="Post">
-              <button
-                class="btn post-btn-outline"
-                (click)="handleOpenFeedBack()"
-              >
-                <!-- <i class="fa-solid fa-file-circle-plus post-icon"></i> -->
-                Post
-              </button>
-            </div>
-            <div tabindex="0" data-bs-toggle="tooltip" title="Edit">
-              <i class="fa-solid fa-pen-to-square edit-icon"></i>
-            </div>
-            <div tabindex="0" data-bs-toggle="tooltip" title="Delete">
-              <i class="fa-solid fa-trash delete-icon"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div [ngClass]="modal" class="containersss" tabindex="-1" role="dialog">
-  <div class="content" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="text-light pl-4 title-firstLetter">J</span
-        ><span class="titles">oyMeter</span>
-        <p class="p-subhed">New session</p>
-      </div>
-      <div class="modal-body">
-        <!-- <p class="p-subcontent">FEEDBACK:</p> -->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-9">
-              <div class="row">
-                <div class="col">
-                  <p class="p-subcontent">NAME</p>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Name the session"
-                    aria-label="Recipient's username"
-                  />
-                </div>
-                <div class="col">
-                  <p class="p-subcontent">TEAM</p>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Recipient's username"
-                    aria-label="Recipient's username"
-                  />
-                </div>
-                <div class="col">
-                  <p class="p-subcontent">TYPE</p>
-                  <select class="form-select form-select-lg">
-                    <option selected>Seminar</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <p class="p-subcontent">EVENT HAPPENED BETWEEN</p>
-                <div class="col-sm-5">
-                  <input type="date" class="datepicker-control" />
-                </div>
-                <div class="col-sm-1" style="text-align: center">
-                  <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="col-sm-5">
-                  <input type="date" class="datepicker-control" />
-                </div>
-                <div class="col-sm-1"></div>
-              </div>
-              <div class="row mt-4">
-                <p class="p-subcontent">FEEDBACK DURATION</p>
-                <div class="col-sm-5">
-                  <input type="date" class="datepicker-control" />
-                </div>
-                <div class="col-sm-1" style="text-align: center">
-                  <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="col-sm-5">
-                  <input type="date" class="datepicker-control" />
-                </div>
-                <div class="col-sm-1"></div>
-              </div>
+
+<div class="card">
+  <div class="d-flex mt-2" style="justify-content: space-between">
+    <div class="header-joy">
+      <button class="btn btn-dashboad" (click)="openModal('custom-modal-1')">
+        Create a <span class="text-light pl-4 title-firstLetter">J</span
+        ><span class="titles">oyMeter</span> Session
+      </button>
+    </div>
+    <div class="header-joy">
+      <button class="btn btn-dashboad" [routerLink]="['/personaldashboard']">
+        <i class="fa-solid fa-gauge-simple-high" ></i>   Personal Dashboard
+      </button>
+    </div>
+  </div>
+  <div *ngIf="!isDetailOpen">
+    <div class="card card-contant py-2 mt-4" *ngFor="let data of joyMeterData">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3 taking-col" (click)="handleOpenDetail(data)">
+            <h6 class="heading active">TAKING FEEDBACK</h6>
+            <h6 class="heading-content">{{ data.taking }}</h6>
+          </div>
+          <div class="col">
+            <h6 class="heading">EVENT TYPE</h6>
+            <div class="list-text">{{ data.eventType }}</div>
+          </div>
+          <div class="col">
+            <h6 class="heading">CREATOR</h6>
+            <div class="list-text">{{ data.creator }}</div>
+          </div>
+          <div class="col-2">
+            <h6 class="heading">FEEDBACK STATUS</h6>
+            <div class="list-text" [style.color]="data.feedbackStatus.color">
+              {{ data.feedbackStatus.text }}
             </div>
-            <div class="col-sm-3">
-              <p class="p-subcontent">FEEDBACK:</p>
-              <div class="textarea-cont">
-                <div id="editparent">
-                  <div id="editControls">
-                    <div class="btn-group">
-                      <a
-                        class="btn btn-xs btn-default"
-                        data-role="undo"
-                        href="#"
-                        title="Undo"
-                        ><i class="fa fa-undo"></i
-                      ></a>
-                      <a
-                        class="btn btn-xs btn-default"
-                        data-role="redo"
-                        href="#"
-                        title="Redo"
-                        ><i class="fa fa-repeat"></i
-                      ></a>
-                    </div>
-                    <div class="btn-group">
-                      <a
-                        class="btn btn-xs btn-default"
-                        data-role="bold"
-                        href="#"
-                        title="Bold"
-                        ><i class="fa fa-bold"></i
-                      ></a>
-                      <a
-                        class="btn btn-xs btn-default"
-                        data-role="italic"
-                        href="#"
-                        title="Italic"
-                        ><i class="fa fa-italic"></i
-                      ></a>
-                      <a
-                        class="btn btn-xs btn-default"
-                        data-role="underline"
-                        href="#"
-                        title="Underline"
-                        ><i class="fa fa-underline"></i
-                      ></a>
-                      <a
-                        class="btn btn-xs btn-default"
-                        data-role="strikeThrough"
-                        href="#"
-                        title="Strikethrough"
-                        ><i class="fa fa-strikethrough"></i
-                      ></a>
-                    </div>
-                  </div>
-                  <div id="editor">
-                    <span>write your message here...</span>
-                  </div>
-                  <textarea
-                    name="ticketDesc"
-                    id="editorCopy"
-                    required="required"
-                    style="display: none"
-                    placeholder="write your message here"
-                  ></textarea>
-                </div>
+          </div>
+          <div class="col-2">
+            <h6 class="heading">EVENT HAPPENED BETWEEN</h6>
+            <div class="list-text">
+              {{ data.evtHapBet.start }} - {{ data.evtHapBet.end }}
+            </div>
+          </div>
+          <div class="col">
+            <h6 class="heading d-flex justify-content-center">ACTION</h6>
+            <div class="d-flex justify-content-between">
+              <a href="/board">
+                <button class="btn btn-primary board-btn">Board</button></a
+              >
+              <div tabindex="0" data-bs-toggle="tooltip" title="Post">
+                <button
+                  class="btn post-btn-outline"
+                  (click)="handleOpenFeedBack()"
+                >
+                  <!-- <i class="fa-solid fa-file-circle-plus post-icon"></i> -->
+                  Post
+                </button>
+              </div>
+              <div tabindex="0" data-bs-toggle="tooltip" title="Edit">
+                <i class="fa-solid fa-pen-to-square edit-icon"></i>
+              </div>
+              <div tabindex="0" data-bs-toggle="tooltip" title="Delete">
+                <i class="fa-solid fa-trash delete-icon"></i>
               </div>
             </div>
           </div>
         </div>
-        <div class="container-fluid">
-          <div class="row mt-4">
-            <div class="col-sm-9">
-              <p class="p-subcontent">OPTIONS</p>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckChecked"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexCheckChecked">
-                      Checked checkbox
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckChecked"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexCheckChecked">
-                      Checked checkbox
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <p class="p-subcontent">PASSCODE</p>
-              <div class="row" style="text-align: center">
-                <div class="col"><span class="passcode-span">T</span></div>
-                <div class="col"><span class="passcode-span">E</span></div>
-                <div class="col"><span class="passcode-span">S</span></div>
-                <div class="col"><span class="passcode-span">T</span></div>
-              </div>
-              <div class="row mt-3" style="text-align: center">
-                <div class="col"><i class="fa-solid fa-copy"></i>Copy</div>
-                <div class="col"><i class="fa fa-bolt fa-fw"></i>Generate</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row mt-3">
-            <p class="p-subcontent">INVITE OTHERS</p>
-            <div>
-              <span class="mail-span"
-                >johnn@gmail.com <i class="fa-regular fa-circle-xmark"></i
-              ></span>
-              <span class="mail-span"
-                >kumar@gmail.com <i class="fa-regular fa-circle-xmark"></i
-              ></span>
-              <span class="mail-span"
-                >peter@gmail.com <i class="fa-regular fa-circle-xmark"></i
-              ></span>
-              <span class="mail-span"
-                >suresh@yahoo.com <i class="fa-regular fa-circle-xmark"></i
-              ></span>
-              <span class="mail-span"
-                >Queen@gmail.com <i class="fa-regular fa-circle-xmark"></i
-              ></span>
-              <span class="mail-span"
-                >babu@yahoo.com <i class="fa-regular fa-circle-xmark"></i
-              ></span>
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row mt-4">
-            <!-- <div class="col- mt-2"> -->
-            <p class="p-subcontent">CHOOSE YOUR MOODS SET</p>
-            <div class="row">
-              <div class="col-sm-1">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                    checked
-                    (click)="onSecondGroupChange(val1)"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Default
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    (click)="onSecondGroupChange(val2)"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Clouds
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    (click)="onSecondGroupChange(val3)"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Moods
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    (click)="onSecondGroupChange(val4)"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Custom
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-11">
-                <div *ngIf="val == 1">
-                  <app-feedback></app-feedback>
-                </div>
-                <div *ngIf="val == 2">
-                  <app-feedback2></app-feedback2>
-                </div>
-                <div *ngIf="val == 3">
-                  <app-feedback3></app-feedback3>
-                </div>
-              </div>
-            </div>
-            <!-- </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="feedback-btn"
-          data-dismiss="modal"
-          (click)="closeModal()"
-        >
-          POST FEEDBACK
-        </button>
       </div>
     </div>
   </div>
-</div>
-<div [ngClass]="feedBackModal" class="containersss" tabindex="-1" role="dialog">
-  <div class="content" role="document">
-    <app-feedback></app-feedback>
+  
+  <div [ngClass]="modal" class="containersss" tabindex="-1" role="dialog">
+    <div class="content" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="text-light pl-4 title-firstLetter">J</span
+          ><span class="titles">oyMeter</span>
+          <p class="p-subhed">New session</p>
+        </div>
+        <div class="modal-body">
+          <!-- <p class="p-subcontent">FEEDBACK:</p> -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col">
+                    <p class="p-subcontent">NAME</p>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name the session"
+                      aria-label="Recipient's username"
+                    />
+                  </div>
+                  <div class="col">
+                    <p class="p-subcontent">TEAM</p>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Recipient's username"
+                      aria-label="Recipient's username"
+                    />
+                  </div>
+                  <div class="col">
+                    <p class="p-subcontent">TYPE</p>
+                    <select class="form-select form-select-lg">
+                      <option selected>Seminar</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <p class="p-subcontent">EVENT HAPPENED BETWEEN</p>
+                  <div class="col-sm-5">
+                    <input type="date" class="datepicker-control" />
+                  </div>
+                  <div class="col-sm-1" style="text-align: center">
+                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="date" class="datepicker-control" />
+                  </div>
+                  <div class="col-sm-1"></div>
+                </div>
+                <div class="row mt-4">
+                  <p class="p-subcontent">FEEDBACK DURATION</p>
+                  <div class="col-sm-5">
+                    <input type="date" class="datepicker-control" />
+                  </div>
+                  <div class="col-sm-1" style="text-align: center">
+                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="date" class="datepicker-control" />
+                  </div>
+                  <div class="col-sm-1"></div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p class="p-subcontent">FEEDBACK:</p>
+                <div class="textarea-cont">
+                  <div id="editparent">
+                    <div id="editControls">
+                      <div class="btn-group">
+                        <a
+                          class="btn btn-xs btn-default"
+                          data-role="undo"
+                          href="#"
+                          title="Undo"
+                          ><i class="fa fa-undo"></i
+                        ></a>
+                        <a
+                          class="btn btn-xs btn-default"
+                          data-role="redo"
+                          href="#"
+                          title="Redo"
+                          ><i class="fa fa-repeat"></i
+                        ></a>
+                      </div>
+                      <div class="btn-group">
+                        <a
+                          class="btn btn-xs btn-default"
+                          data-role="bold"
+                          href="#"
+                          title="Bold"
+                          ><i class="fa fa-bold"></i
+                        ></a>
+                        <a
+                          class="btn btn-xs btn-default"
+                          data-role="italic"
+                          href="#"
+                          title="Italic"
+                          ><i class="fa fa-italic"></i
+                        ></a>
+                        <a
+                          class="btn btn-xs btn-default"
+                          data-role="underline"
+                          href="#"
+                          title="Underline"
+                          ><i class="fa fa-underline"></i
+                        ></a>
+                        <a
+                          class="btn btn-xs btn-default"
+                          data-role="strikeThrough"
+                          href="#"
+                          title="Strikethrough"
+                          ><i class="fa fa-strikethrough"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div id="editor">
+                      <span>write your message here...</span>
+                    </div>
+                    <textarea
+                      name="ticketDesc"
+                      id="editorCopy"
+                      required="required"
+                      style="display: none"
+                      placeholder="write your message here"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row mt-4">
+              <div class="col-sm-9">
+                <p class="p-subcontent">OPTIONS</p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Checked checkbox
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Checked checkbox
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p class="p-subcontent">PASSCODE</p>
+                <div class="row" style="text-align: center">
+                  <div class="col"><span class="passcode-span">T</span></div>
+                  <div class="col"><span class="passcode-span">E</span></div>
+                  <div class="col"><span class="passcode-span">S</span></div>
+                  <div class="col"><span class="passcode-span">T</span></div>
+                </div>
+                <div class="row mt-3" style="text-align: center">
+                  <div class="col"><i class="fa-solid fa-copy"></i>Copy</div>
+                  <div class="col"><i class="fa fa-bolt fa-fw"></i>Generate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row mt-3">
+              <p class="p-subcontent">INVITE OTHERS</p>
+              <div>
+                <span class="mail-span"
+                  >johnn@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="mail-span"
+                  >kumar@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="mail-span"
+                  >peter@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="mail-span"
+                  >suresh@yahoo.com <i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="mail-span"
+                  >Queen@gmail.com <i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="mail-span"
+                  >babu@yahoo.com <i class="fa-regular fa-circle-xmark"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row mt-4">
+              <!-- <div class="col- mt-2"> -->
+              <p class="p-subcontent">CHOOSE YOUR MOODS SET</p>
+              <div class="row">
+                <div class="col-sm-1">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                      (click)="onSecondGroupChange(val1)"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Default
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                      (click)="onSecondGroupChange(val2)"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Clouds
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                      (click)="onSecondGroupChange(val3)"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Moods
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                      (click)="onSecondGroupChange(val4)"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Custom
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-11">
+                  <div *ngIf="val == 1">
+                    <app-feedback></app-feedback>
+                  </div>
+                  <div *ngIf="val == 2">
+                    <app-feedback2></app-feedback2>
+                  </div>
+                  <div *ngIf="val == 3">
+                    <app-feedback3></app-feedback3>
+                  </div>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="feedback-btn"
+            data-dismiss="modal"
+            (click)="closeModal()"
+          >
+            POST FEEDBACK
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<div *ngIf="isDetailOpen" class="mt-4">
-  <app-joy-meter-details
-    [detailData]="detailData"
-    (returnHome)="handleReturnHome($event)"
-  ></app-joy-meter-details>
+  <div [ngClass]="feedBackModal" class="containersss" tabindex="-1" role="dialog">
+    <div class="content" role="document">
+      <app-feedback></app-feedback>
+    </div>
+  </div>
+  <div *ngIf="isDetailOpen" class="mt-4">
+    <app-joy-meter-details
+      [detailData]="detailData"
+      (returnHome)="handleReturnHome($event)"
+    ></app-joy-meter-details>
+  </div>
 </div>

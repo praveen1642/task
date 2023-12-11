@@ -1,0 +1,103 @@
+.card-headr {
+  display: flex;
+  width: 100%;
+}
+.titles {
+  color: var(--primary-color);
+  font-weight: 400;
+  text-align: left;
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.title {
+  color: var(--primary-color);
+  font-weight: 300;
+  text-align: left;
+  font-size: 15px;
+  font-family: fantasy;
+}
+.content-div {
+  margin-top: 2%;
+}
+.span-subhed {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: monospace;
+  font-size: 12px;
+}
+.p-subcontent {
+  font-size: 14px;
+  font-family: cursive;
+}
+.span-content {
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+
+.sub-title {
+  font-size: var(--primary-fontSize);
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  font-family: var(--primary-fontFamily);
+}
+.search-bardiv {
+  text-align: -webkit-center;
+  padding: 4px;
+}
+// .search-bar {
+// }
+.feedback-btndiv {
+  text-align: -webkit-right;
+}
+
+.feedback-btn {
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 25px !important;
+  background-color: white;
+  padding: 2%;
+  font-weight: 600;
+}
+
+.content-row {
+  margin: 10px;
+}
+
+.profile-pic {
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 6px;
+}
+
+.p-subcontent {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: system-ui;
+  margin: 0;
+  color: gray;
+}
+.p-subcontent1 {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: system-ui;
+  margin: 2px;
+  color: gray;
+}
+
+.form-check-inputs {
+  background-color: none;
+  border-color: var(--primary-color);
+}
+.form-check-input:checked {
+  background-color: var(--primary-color);
+}
+
+.datepicker-control {
+  border: none !important;
+  border-bottom: 1px solid var(--primary-color) !important;
+  width: 100%;
+  // color: gray;
+}

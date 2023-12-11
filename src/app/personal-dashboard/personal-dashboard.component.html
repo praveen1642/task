@@ -1,0 +1,124 @@
+<div>
+  <div class="container-fluid">
+    <div class="row mt-4 header-row">
+      <div class="col-sm-4 d-flex">
+        <img
+          class="profile-pic"
+          src="../../assets/icon-5359553_640.webp"
+          alt=""
+          width="50"
+        />
+        <div style="display: inline-grid">
+          <span class="titles">Mambo Jambo</span>
+          <p class="p-subcontent">215 days of Joymeter</p>
+          <p class="p-subcontent">
+            First engaged at 07 july 2019 | Last engaged at 08 march 2020
+          </p>
+        </div>
+        <!-- <span class="title">Mambo Jambo</span> -->
+      </div>
+      <div class="col-sm-4 search-bardiv">
+        <div style="display: inline-grid">
+          <p class="p-subcontent1">25</p>
+          <p class="p-subcontent1">EVENTS</p>
+        </div>
+        <div style="display: inline-grid">
+          <p class="p-subcontent1">2,6787</p>
+          <p class="p-subcontent1">ATTENDEES</p>
+        </div>
+      </div>
+      <div class="col-sm-4 feedback-btndiv">
+        <button class="feedback-btn" [routerLink]="['/home']">
+          Exit Dahsboard
+        </button>
+      </div>
+    </div>
+    <div class="row mt-4 content-row">
+      <div class="card">
+        <!-- <div class="container-fluid"> -->
+        <div class="row mt-2">
+          <div class="col-xl-6 col-sm-6 col-lg-6 col-mg-6">
+            <h3 class="title">LIFETIME SCORES</h3>
+            <div class="row">
+              <div class="col">
+                <div class="form-checks">
+                  <input
+                    class="form-check-inputs"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Default
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-checks">
+                  <input
+                    class="form-check-inputs"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Clouds
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-checks">
+                  <input
+                    class="form-check-inputs"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Moods
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-checks">
+                  <input
+                    class="form-check-inputs"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Custom
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <app-chart></app-chart>
+            </div>
+          </div>
+          <div class="col-xl-6 col-sm-6 col-lg-6 col-mg-6">
+            <h3 class="title">FILTER STATISTICS BY DATE</h3>
+            <div class="row mt-2">
+              <div class="col-sm-5">
+                <input type="date" class="datepicker-control" />
+              </div>
+              <div class="col-sm-1" style="text-align: center">
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="col-sm-5">
+                <input type="date" class="datepicker-control" />
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+            <div class="row mt-4">
+              <app-charts></app-charts>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

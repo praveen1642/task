@@ -24,8 +24,9 @@
 .btn-dashboad {
   border-radius: 22px;
   font-size: 12px;
-  border: 1px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
   font-weight: 600;
+  height: 100%;
 }
 
 .form-control {
@@ -256,4 +257,8 @@ a:hover {
     padding: 2px 8px 2px 8px;
     font-size: 10px;
     margin-left: 4px;
+}
+
+.header-joy{
+  margin: 2px;
 }
